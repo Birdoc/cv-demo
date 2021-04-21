@@ -20,13 +20,20 @@ x3.onclick = ()=>{
 }
 let step = () => {
   setTimeout(() => {
-    string2 += string[i]
-    i+=1
-    demo.innerHTML = string2
-    style.innerHTML = string2
-    if (i < string.length) {
-      step()
-    } else {}
+   if(string[i] ==="\n"){
+     string2 += "<br>"
+   }else if(string[i]===" "){
+     string2 += "&nbsp"
+   }else{
+     string2 += string[i]
+   }
+   console.log(string2)
+   demo.innerHTML = string2
+   style.innerHTML = string.substring(0,i)
+   if(i<string.length-1){
+     i+=1
+     step()
+   }
   }, speed)
 }
 step()
