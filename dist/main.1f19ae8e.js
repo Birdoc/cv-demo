@@ -118,7 +118,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-var string = "\u4F60\u597D \u8FD9\u662F\u4E00\u6BB5\u4F1A\u52A8\u7684\u4EE3\u7801\u4F60\u597D \u8FD9\u662F\u4E00\u6BB5\u4F1A\u52A8\u7684\u4EE3\u7801\u4F60\u597D \u8FD9\u662F\u4E00\u6BB5\u4F1A\u52A8\u7684\u4EE3\u7801\u4F60\u597D \u8FD9\u662F\u4E00\u6BB5\u4F1A\u52A8\u7684\u4EE3\u7801\u4F60\u597D \u8FD9\u662F\u4E00\u6BB5\u4F1A\u52A8\u7684\u4EE3\u7801\u4F60\u597D \u8FD9\u662F\u4E00\u6BB5\u4F1A\u52A8\u7684\u4EE3\u7801";
+var demo = document.querySelector('#content');
+var style = document.querySelector('#style');
+var string = "/*\u4F60\u597D \u8FD9\u662F\u4E00\u6BB5\u4F1A\u52A8\u7684\u4EE3\u7801\n\u63A5\u4E0B\u6765\u5199\u4E00\u6BB5css\u4EE3\u7801*/\nbody{\n  color:red;\n}\n";
 var string2 = "";
 var i = 0;
 var speed = 240;
@@ -139,7 +141,8 @@ var step = function step() {
   setTimeout(function () {
     string2 += string[i];
     i += 1;
-    content.innerHTML = string2;
+    demo.innerHTML = string2;
+    style.innerHTML = string2;
 
     if (i < string.length) {
       step();
@@ -176,7 +179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "13538" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10847" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
